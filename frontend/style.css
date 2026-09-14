@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    color: white;
+
+    background:
+        radial-gradient(circle at top left, #8b5cf6 0%, transparent 35%),
+        radial-gradient(circle at bottom right, #ec4899 0%, transparent 35%),
+        linear-gradient(135deg, #240046, #3c096c, #5a189a);
+
+    padding: 30px;
+}
+
+/* Main Container */
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* Heading */
+
+h1 {
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 10px;
+
+    text-shadow: 0 0 20px #d8b4fe;
+}
+
+.subtitle {
+    text-align: center;
+    color: #e9d5ff;
+    margin-bottom: 35px;
+}
+
+/* Dashboard */
+
+.dashboard {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+/* Cards */
+
+.card {
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(15px);
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    border-radius: 25px;
+    padding: 30px;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(217, 70, 239, 0.4);
+}
+
+.card h2 {
+    margin-bottom: 25px;
+    color: #f0abfc;
+}
+
+/* Form */
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    margin-bottom: 7px;
+    color: #f5d0fe;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 13px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+
+    outline: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    box-shadow: 0 0 15px #e879f9;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #ddd;
+}
+
+/* Button */
+
+button {
+    width: 100%;
+    padding: 14px;
+
+    border: none;
+    border-radius: 14px;
+
+    background: linear-gradient(90deg, #f72585, #7209b7, #4361ee);
+
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 25px #f72585;
+}
+
+/* Expense Items */
+
+.expense-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px;
+    margin-bottom: 15px;
+
+    border-radius: 16px;
+
+    background: rgba(255, 255, 255, 0.1);
+
+    transition: 0.3s;
+}
+
+.expense-item:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateX(6px);
+}
+
+.expense-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.expense-category {
+    color: #f0abfc;
+    font-size: 14px;
+}
+
+.expense-amount {
+    color: #86efac;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Visual Section */
+
+.visual {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.money-icon {
+    font-size: 70px;
+
+    animation: float 3s ease-in-out infinite;
+
+    filter: drop-shadow(0 0 20px #f0abfc);
+}
+
+@keyframes float {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+}
